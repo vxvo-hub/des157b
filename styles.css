@@ -109,22 +109,21 @@ header{
 #banner{
     width: 96%;
     /* padding: 12px; */
+    height: 200px;
     display: flex;
     flex-direction: row;
     gap: 8px;
     padding: 16px;
-    transition: 
 }
 
 #banner img{
     flex: 1;
     min-width: 0;
     width: 0;
-    height: auto;
+    height: 100%;
     object-fit: cover;
     border-top: 2px solid #0E0B0C;
     border-left: 2px solid #0E0B0C;
-    opacity: 1;
 }
 
 #banner img.switch{
