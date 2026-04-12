@@ -14,7 +14,7 @@
     const container = document.getElementById("container");
     const photos = document.querySelectorAll("#banner img");
     const main = document.querySelector("main");
-    const mainh3 = document.querySelectorAll("main h3");
+    const mainh2 = document.querySelectorAll("main h2");
     const a = document.querySelectorAll("a");
     const sectiona = document.querySelectorAll("section a");
     const btnIcon = document.querySelector("#switch img");
@@ -33,7 +33,7 @@
         container.className = "switch";
         photos.forEach(photo => photo.classList.add("switch"));
         main.classList.add("switch");
-        mainh3.forEach(h3 => h3.classList.add("switch"));
+        mainh2.forEach(h2 => h2.classList.add("switch"));
         sectiona.forEach(a => a.classList.add("switch"));
         a.forEach(a => a.classList.add("switch"));
         btnIcon.src = 'icons/switchmodern.svg';
@@ -50,13 +50,16 @@
         container.removeAttribute("class");
         photos.forEach(photo => photo.classList.remove("switch"));
         main.classList.remove("switch");
-        mainh3.forEach(h3 => h3.classList.remove("switch"));
+        mainh2.forEach(h2 => h2.classList.remove("switch"));
         sectiona.forEach(a => a.classList.remove("switch"));
         a.forEach(a => a.classList.remove("switch"));
-        btnIcon.src = 'icons/switchretro.svg';
+        btnIcon.src = 'icons/switchpixel.svg';
         switchBtn.removeAttribute("class");
         mode = "retro";
     }
     })
+
+    photos.forEach(photo => photo.style.opacity = "0");
+
 
 })();

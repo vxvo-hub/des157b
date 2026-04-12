@@ -7,6 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    transition: all 2s;
 }
 
 body.switch{
@@ -26,6 +27,7 @@ body.switch{
     flex-direction: column;
     box-shadow: 2px 2px 0 0 #000;
     align-items: center; 
+    transition: all 1s;
 }
 
 #container.switch{
@@ -50,6 +52,7 @@ header{
     justify-content: space-between;
     flex: 1;
     margin: 0 4px 4px 4px;
+    transition: all 1s;
 }
 
 #top.switch{
@@ -99,6 +102,8 @@ header{
 #switch.switch {
     background-color: white;
     border: none;
+    box-shadow: none;
+    margin-right: 20px;
 }
 
 #banner{
@@ -108,6 +113,7 @@ header{
     flex-direction: row;
     gap: 8px;
     padding: 16px;
+    transition: 
 }
 
 #banner img{
@@ -118,6 +124,7 @@ header{
     object-fit: cover;
     border-top: 2px solid #0E0B0C;
     border-left: 2px solid #0E0B0C;
+    opacity: 1;
 }
 
 #banner img.switch{
@@ -147,11 +154,11 @@ main section {
     padding: 1em;
 }
 
-main h3{
+main h2{
     margin: 12px 0 0 0;
 }
 
-main h3.switch{
+main h2.switch{
     text-transform: uppercase;
     letter-spacing: 1.2px;
     font-weight: 600;
