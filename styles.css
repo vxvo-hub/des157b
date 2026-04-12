@@ -27,7 +27,7 @@ body.switch{
     flex-direction: column;
     box-shadow: 2px 2px 0 0 #000;
     align-items: center; 
-    transition: all 1s;
+
 }
 
 #container.switch{
@@ -52,7 +52,6 @@ header{
     justify-content: space-between;
     flex: 1;
     margin: 0 4px 4px 4px;
-    transition: all 1s;
 }
 
 #top.switch{
@@ -75,6 +74,17 @@ header{
     text-transform: uppercase;
     letter-spacing: 1.2px;
     margin: 16px;
+}
+
+@keyframes typewriter {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+
+h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 4s steps(30) forwards;
 }
 
 #switch{
@@ -108,12 +118,12 @@ header{
 
 #banner{
     width: 96%;
-    /* padding: 12px; */
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: row;
     gap: 8px;
-    padding: 16px;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 #banner img{
@@ -126,9 +136,18 @@ header{
     border-left: 2px solid #0E0B0C;
 }
 
+#banner img:hover{
+    transform: translateY(-4px);
+}
+
 #banner img.switch{
     border: none;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+#banner img.switch:hover{
+    transform: scale(1.05);
 }
 
 main {
@@ -202,6 +221,10 @@ section a:hover::before {
     filter: invert(1); 
 }
 
+section a:hover::before {
+    filter: none; 
+}
+
 section a {
     width: 100%;
     line-height: 1em;
@@ -213,6 +236,12 @@ section a {
 section a:hover {
     background-color: #020080;
     color: white;
+}
+
+body.switch section a:hover{
+    background-color: rgb(235, 235, 235);
+    border-radius: 4px;
+    color: black;
 }
 
 section.switch a {
