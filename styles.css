@@ -246,9 +246,22 @@ body.switch section a:hover{
 
 section.switch a {
     color: #333;
+    transition: transform 0.3s ease;
 }
 
 section.switch a:hover {
     background-color: #333;
     color: rgb(235, 235, 235);
+}
+
+@media (max-width: 700px) {
+    main {
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    main section {
+        flex: none;
+        width: 100%;
+    }
 }

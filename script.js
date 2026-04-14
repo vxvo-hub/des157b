@@ -41,10 +41,10 @@
         mode = "modern";
     } else {
         body.removeAttribute("class");
-        beach.src = 'images/beach.png';
-        garden.src = 'images/garden.png';
-        farm.src = 'images/farm.png';
-        concert.src = 'images/concert.png';
+        beach.src = 'images/beachclear.png';
+        garden.src = 'images/gardenclear.png';
+        farm.src = 'images/farmclear.png';
+        concert.src = 'images/concertclear.png';
         top.removeAttribute("class");
         toph1.removeAttribute("class");
         container.removeAttribute("class");
