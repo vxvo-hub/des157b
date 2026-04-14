@@ -24,10 +24,10 @@
     switchBtn.addEventListener("click", function () {
         if(mode === "retro") {
         body.className = "switch";
-        beach.src = 'images/beachclear.jpg';
-        garden.src = 'images/gardenclear.jpg';
-        farm.src = 'images/farmclear.jpg';
-        concert.src = 'images/concertclear.jpg';
+        beach.src = 'images/beachclear.JPG';
+        garden.src = 'images/gardenclear.JPG';
+        farm.src = 'images/farmclear.JPG';
+        concert.src = 'images/concertclear.JPG';
         top.className = "switch";
         toph1.className = "switch";
         container.className = "switch";
@@ -41,10 +41,10 @@
         mode = "modern";
     } else {
         body.removeAttribute("class");
-        beach.src = 'images/beachclear.png';
-        garden.src = 'images/gardenclear.png';
-        farm.src = 'images/farmclear.png';
-        concert.src = 'images/concertclear.png';
+        beach.src = 'images/beach.png';
+        garden.src = 'images/garden.png';
+        farm.src = 'images/farm.png';
+        concert.src = 'images/concert.png';
         top.removeAttribute("class");
         toph1.removeAttribute("class");
         container.removeAttribute("class");
