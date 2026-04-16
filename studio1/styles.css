@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#myVideo.yellow {
+    filter: sepia(1) saturate(10) hue-rotate(0deg);
+}
+
+.fa-expand {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: black;
+    z-index: 2;
+}
+
+.fa-expand:hover {
+    color: #ccc;
+    cursor: pointer;
+}
+
+section{
+    position: relative;
+    z-index: 10;
+    height: 64px;
+}
+
+#line1{
+    bottom: 0%;
+    left: 0%;
+}
+
+#img1{
+    bottom: 10%;
+    left: 10%;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+.showing{
+    opacity: 1;
+    background-color: white;
+}
+
+p{
+    font-size: 40px;
+    padding: 12px;
+}
+
+section p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    white-space: nowrap;
+
+}
+
+@media (max-width: 700px) {
+    p{
+        font-size: 20px;
+    }
+    section{
+        height: 40px;
+    }
+}
+
+.fas fa-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 36px;
+  color: antiquewhite;
+  transform: translate(-50%, -50%);
+}
