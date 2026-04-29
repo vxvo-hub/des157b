@@ -1,0 +1,136 @@
+body{
+    background-color: #EBEBEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+}
+
+#container{
+    height: 90vh;
+    /* width: 90vw; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#clipboard{
+    flex: 2 1 0;
+    max-width: 800px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-image: url('media/clipboard.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 17% 20% 15%;
+    
+}
+
+
+#diagnosis {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+   
+}
+
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.form-section h2 {
+    background-color: #e8e8e8;
+    text-align: center;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.field {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.field-row {
+    display: flex;
+    gap: 16px;
+    padding: 8px;
+}
+
+.fields-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+
+.answer {
+    border-bottom: 1px solid black;
+    min-width: 120px;
+    display: inline-block;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 20px;
+    flex: 1;
+}
+
+/* .handwritten{
+    
+} */
+
+.prescription-text {
+    font-family: 'Nothing You Could Do', cursive;
+    padding: 8px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#pages {
+    position: relative;
+    width: fit-content; 
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pages img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button{
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+button:hover{
+    cursor: pointer;
+    color: #555;
+}
