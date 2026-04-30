@@ -1,0 +1,14 @@
+{
+  "title": "Number of Instagram Reels Watched",
+  "data": [
+    { "period": "April 13 – 14", "reels_watched": 140 },
+    { "period": "April 14 – 15", "reels_watched": 180 },
+    { "period": "April 15 – 16", "reels_watched": 143 },
+    { "period": "April 16 – 17", "reels_watched": 63 },
+    { "period": "April 17 – 18", "reels_watched": 80 },
+    { "period": "April 18 – 19", "reels_watched": 67 },
+    { "period": "April 19 – 20", "reels_watched": 119 },
+    { "period": "April 20 – 21", "reels_watched": 142 },
+    { "period": "April 21 – 22", "reels_watched": 324 }
+  ]
+}

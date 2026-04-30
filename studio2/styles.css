@@ -13,12 +13,14 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 #clipboard{
     flex: 2 1 0;
     max-width: 800px;
     border-radius: 4px;
+    align-self: stretch;
     position: relative;
     display: flex;
     justify-content: center;
@@ -37,7 +39,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 12px;
-   
+    height: 100%;
 }
 
 h1 {
@@ -90,17 +92,20 @@ label{
     font-family: 'Nothing You Could Do', cursive;
     font-size: 20px;
     flex: 1;
+    white-space: nowrap;
 }
 
-/* .handwritten{
-    
-} */
+.form-section:last-child {
+    flex: 1; 
+}
 
 .prescription-text {
     font-family: 'Nothing You Could Do', cursive;
     padding: 8px;
     font-size: 1.1rem;
     line-height: 1.6;
+    min-height: 80px;
+    height: 100%;
 }
 
 #pages {
@@ -133,4 +138,13 @@ button{
 button:hover{
     cursor: pointer;
     color: #555;
+}
+
+.disabled{
+    color: #898989;
+    cursor: not-allowed;
+}
+
+.disabled:hover{
+    color: #898989;
 }
