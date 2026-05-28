@@ -15,6 +15,20 @@
     const screentimeDisplay = document.getElementById("screentime-display");
     let userScreenTime = 0;
 
+    const testOverlay = document.getElementById("test-overlay");
+    const closeOverlayBtn = document.getElementById("close-overlay-btn");
+
+    closeOverlayBtn.addEventListener("click", function() {
+        testOverlay.classList.add("hidden"); 
+        console.log("Usability test started by user.");
+    });
+
+    // Your existing code below...
+    startBtn.addEventListener("click", function() {
+        startscreen.classList.add("offscreen");
+        idealScreen.classList.remove("offscreen");
+    });
+
     startBtn.addEventListener("click", function() {
         startscreen.classList.add("offscreen");
         idealScreen.classList.remove("offscreen");
