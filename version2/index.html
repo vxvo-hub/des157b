@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attention Economy Capstone</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script> 
+</head>
+<body>
+    <div id="startscreen" class="onscreen">
+        <h1>You have 24 hours</h1>
+        <p>Today's most powerful companies don't sell products.
+        They sell your attention — to advertisers, to algorithms,
+        to anyone willing to pay. Every scroll is a transaction
+        you never agreed to.</p>
+        <p>
+        <button class="btn-primary" id="startBtn">How would you spend it?</button>
+    </div>
+
+    <div id="schedulebuilder" class="offscreen">
+        <h1>Build Your Schedule</h1>
+        <p>Drag and drop activities into your 24-hour schedule. 
+        How would you allocate your time if you had complete control?</p>
+        <div id="schedule">
+            <div class="time-block" data-time="0">12:00 AM</div>
+            <div class="time-block" data-time="1">1:00 AM</div>
+            <div class="time-block" data-time="2">2:00 AM</div>
+        </div>
+    </div>
+
+    <div id="idealScreen" class="offscreen">
+        <div class="phase-bar">
+            <div class="phase-label">Phase <span>01</span> — Your Ideal Day</div>
+            <div class="phase-steps">
+            <div class="phase-dot active" id="dot1"></div>
+            <div class="phase-dot" id="dot2"></div>
+            <div class="phase-dot" id="dot3"></div>
+            </div>
+        </div>
+        
+        <div class="builder-layout">
+            <!-- Palette -->
+            <aside class="palette-col">
+            <div class="palette-title">Drag to schedule</div>
+            <div class="palette-grid" id="palette-ideal"></div>
+            </aside>
+        
+            <!-- Main -->
+            <main class="builder-main">
+            <div class="builder-header">
+                <h2>BUILD YOUR IDEAL DAY</h2>
+                <p>Drag blocks onto the 24-hour timeline. Account for all <strong>24 hours</strong>.</p>
+            </div>
+        
+            <div class="timeline-wrap">
+                <div class="timeline-header">
+                <span class="timeline-header-left">24-Hour Timeline — Midnight to Midnight</span>
+                <span class="hours-badge" id="ideal-hours-badge">0 / 24</span>
+                </div>
+                <div class="timeline" id="timeline-ideal"></div>
+                <div class="hour-label-row" id="ideal-hour-labels"></div>
+            </div>
+        
+            <div class="stats-row" id="ideal-stats-row">
+                <div class="stat-cell">
+                <div class="stat-num" id="stat-ideal-sleep">0h</div>
+                <div class="stat-label">Sleep</div>
+                </div>
+                <div class="stat-cell">
+                <div class="stat-num" id="stat-ideal-growth">0h</div>
+                <div class="stat-label">Growth</div>
+                </div>
+                <div class="stat-cell">
+                <div class="stat-num" id="stat-ideal-social">0h</div>
+                <div class="stat-label">Social / Health</div>
+                </div>
+                <div class="stat-cell">
+                <div class="stat-num" id="stat-ideal-screen">0h</div>
+                <div class="stat-label">Screen Time</div>
+                </div>
+            </div>
+        
+            <div class="breakdown-table" id="ideal-breakdown">
+                <div class="breakdown-row header">
+                <span></span><span>Activity</span><span>Bar</span><span>Hours</span>
+                </div>
+            </div>
+        
+            <div class="cta-area">
+                <button class="btn-primary" id="ideal-next-btn">
+                This is my ideal day →
+                </button>
+                <button class="btn-outline" onclick="clearTimeline('ideal')">Clear</button>
+                <span class="cta-hint" id="ideal-cta-hint">Fill all 24 hours to continue</span>
+            </div>
+            </main>
+        </div>
+    </div>  
+
+    <div class="offscreen" id="checkScreen">
+        <div class="st-eyebrow" id="st-eyebrow">Phase 02 — Reality Check</div>
+        <div class="st-headline" id="st-headline">HOW MUCH<br>DO YOU SCROLL?</div>
+        <p class="st-sub" id="st-sub">
+            Think about Instagram, TikTok, YouTube, Twitter,<br>
+            Reddit. <strong>How many hours per day</strong><br>
+            do you actually spend on social media?
+        </p>
+        
+        <div class="st-input-wrap" id="st-input-wrap">
+            <input class="st-input" type="number" id="screentime-input" value="3" min="0.5" max="16" step="0.5" />
+            <div class="st-unit">hrs / day</div>
+        </div>
+        
+        <p class="st-avg-note" id="st-avg-note">
+            The US average is <span>7.1 hours/day</span> of total screen time.<br>
+            For social media specifically: <span>~2.5–4 hours</span>.
+        </p>
+
+        
+        <button class="btn-primary" id="st-btn">
+            Now rebuild your day with this →
+        </button>
+    </div>
+    
+    
+</body>
+</html>
+
