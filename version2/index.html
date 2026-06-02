@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attention Economy Capstone</title>
     <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js" defer></script>
     <script src="script.js" defer></script> 
 </head>
 <body>
     <div id="startscreen" class="onscreen">
         <h1>You have 24 hours</h1>
-        <p>Today's most powerful companies don't sell products.
-        They sell your attention — to advertisers, to algorithms,
-        to anyone willing to pay. Every scroll is a transaction
-        you never agreed to.</p>
+        <p>Today's most powerful companies don't sell products. They sell your attention to advertisers, to algorithms,
+        to anyone willing to pay. Every scroll is a transaction you never agreed to.</p>
         <p>
         <button class="btn-primary" id="startBtn">How would you spend it?</button>
         </p>
@@ -42,7 +42,11 @@
         <div class="builder-layout">
             <aside class="palette-col">
                 <div class="palette-title">Drag to schedule</div>
-                <div class="palette-grid" id="palette-ideal"></div>
+                <div class="palette-grid" id="palette-ideal">
+                    <div class="block-chip">Sleep</div>
+                    <div class="block-chip">Growth / Studying</div>
+                    <div class="block-chip">Socializing</div>
+                </div>
             </aside>
         
             <main class="builder-main">
@@ -65,7 +69,7 @@
                     <div class="stat-cell"><div class="stat-num" id="stat-ideal-sleep">0h</div><div class="stat-label">Sleep</div></div>
                     <div class="stat-cell"><div class="stat-num" id="stat-ideal-growth">0h</div><div class="stat-label">Growth</div></div>
                     <div class="stat-cell"><div class="stat-num" id="stat-ideal-social">0h</div><div class="stat-label">Social / Health</div></div>
-                    <div class="stat-cell"><div class="stat-num" id="stat-ideal-screen">0h</div><div class="stat-label">Screen Time</div></div>
+                    <div class="stat-cell"><div class="stat-num" id="stat-ideal-screen" class="faded">0h</div><div class="stat-label">Screen Time</div></div>
                 </div>
             
                 <div class="breakdown-table" id="ideal-breakdown">
@@ -76,35 +80,35 @@
             
                 <div class="cta-area">
                     <button class="btn-primary" id="ideal-next-btn">This is my ideal day →</button>
-                    <button class="btn-outline" onclick="clearTimeline('ideal')">Clear</button>
+                    <button class="btn-outline" id="ideal-clear-btn">Clear</button>
                     <span class="cta-hint" id="ideal-cta-hint">Fill all 24 hours to continue</span>
                 </div>
             </main>
         </div>
     </div>  
 
-    <div class="offscreen" id="checkScreen">
-        <div class="st-eyebrow">Phase 02 — Reality Check</div>
-        <div class="st-headline">HOW MUCH<br>DO YOU SCROLL?</div>
+    <div id="checkScreen" class="offscreen">
+ 
+        <p class="st-eyebrow">Phase 02 — Reality Check</p>
+        <h2 class="st-headline">HOW MUCH<br>DO YOU SCROLL?</h2>
         <p class="st-sub">
             Think about Instagram, TikTok, YouTube, Twitter,<br>
             Reddit. <strong>How many hours per day</strong><br>
             do you actually spend on social media?
         </p>
-        
+ 
         <div class="st-input-wrap">
             <input class="st-input" type="number" id="screentime-input" value="3" min="0.5" max="16" step="0.5" />
             <div class="st-unit">hrs / day</div>
         </div>
-        
+ 
         <p class="st-avg-note">
             The US average is <span>7.1 hours/day</span> of total screen time.<br>
             For social media specifically: <span>~2.5–4 hours</span>.
         </p>
-        
-        <button class="btn-primary" id="st-btn">
-            Now rebuild your day with this →
-        </button>
+ 
+        <button class="btn-primary" id="st-btn">Now rebuild your day with this →</button>
+ 
     </div>
 </body>
 </html>
