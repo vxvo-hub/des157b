@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attention Economy Capstone</title>
     <link href="styles.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/draggable.bundle.js" defer></script>
     <script src="script.js" defer></script> 
 </head>
@@ -43,9 +43,18 @@
             <aside class="palette-col">
                 <div class="palette-title">Drag to schedule</div>
                 <div class="palette-grid" id="palette-ideal">
-                    <div class="block-chip">Sleep</div>
-                    <div class="block-chip">Growth / Studying</div>
-                    <div class="block-chip">Socializing</div>
+                    <div class="block-chip" data-category="sleep">Sleep & Rest</div>
+                    
+                    <div class="block-chip" data-category="growth">Classes & School</div>
+                    <div class="block-chip" data-category="growth">Studying / Homework</div>
+                    <div class="block-chip" data-category="growth">Side Project / Skill Building</div>
+                    <div class="block-chip" data-category="growth">Part-Time Work / Job</div>
+                    
+                    <div class="block-chip" data-category="social">Hanging Out w/ Friends</div>
+                    <div class="block-chip" data-category="social">Family Time</div>
+                    <div class="block-chip" data-category="social">Exercise & Sports</div>
+                    <div class="block-chip" data-category="social">Meals & Cooking</div>
+                    <div class="block-chip" data-category="social">Hobbies & Creativity</div>
                 </div>
             </aside>
         
