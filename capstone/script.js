@@ -96,10 +96,7 @@
             const $slot = $(`<div class="hour-slot" data-hour="${i}"></div>`);
             $timeline.append($slot);
 
-            // ── jQuery UI droppable ──
-            // accept: ".block-chip" means only our chips trigger the drop.
-            // hoverClass: highlights the slot while a chip hovers over it.
-            // drop: fires when a chip is released over this slot.
+            //  jQuery UI droppable 
             $slot.droppable({
                 accept: ".block-chip",
                 hoverClass: "drag-over",
